@@ -47,7 +47,7 @@ class AnalizadorDatos:
 # MENÚ NAVEGABLE EN LA BARRA LATERAL (SIDEBAR)
 # ==========================================
 st.sidebar.image("logo_dmc.png")
-st.sidebar.title("📌 Menú de Navegación")
+st.sidebar.title("Menú de Navegación 📌")
 opcion_menu = st.sidebar.radio(
     "Seleccione un módulo:",
     ["1. Home", "2. Carga de Datos", "3. Análisis EDA", "4. Conclusiones"],
