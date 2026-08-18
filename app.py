@@ -65,13 +65,16 @@ if opcion_menu == "1. Home":
     # st.title("🏦 Proyecto: Análisis Exploratorio de Datos - Bank Marketing")
     # st.markdown("---")
     # --- ENCABEZADO CON HTML/CSS ---
+# Reemplaza las líneas 68 a 75 por esto:
+col_img, col_txt = st.columns([1, 4], vertical_alignment="center")
+
+with col_img:
+    st.image("logo_python.png", width=90)
+
+with col_txt:
     st.markdown(
-        """
-        <div style="display: flex; align-items: center; gap: 20px;">
-            <img src="logo_python.png width="90">
-            <h1 style="margin: 0; padding: 0;">Proyecto: Análisis Exploratorio de Datos - Bank Marketing</h1>
-        </div>
-        """,
+        "<h1 style='margin: 0; padding: 0;'>Proyecto: Análisis Exploratorio"
+        " de Datos - Bank Marketing</h1>",
         unsafe_allow_html=True,
     )
 
