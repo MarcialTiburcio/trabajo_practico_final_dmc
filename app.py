@@ -61,8 +61,20 @@ if "data" not in st.session_state:
 # MÓDULO 1: HOME (PRESENTACIÓN)
 # ==========================================
 if opcion_menu == "1. Home":
-    st.image("logo_python.png")
-    st.title("🏦 Proyecto: Análisis Exploratorio de Datos - Bank Marketing")
+    # st.image("logo_python.png")
+    # st.title("🏦 Proyecto: Análisis Exploratorio de Datos - Bank Marketing")
+    # st.markdown("---")
+    # --- ENCABEZADO CON HTML/CSS ---
+    st.markdown(
+        """
+        <div style="display: flex; align-items: center; gap: 20px;">
+            <img src="https://raw.githubusercontent.com/tu-usuario/tu-repo/main/logo_dmc.png" width="90">
+            <h1 style="margin: 0; padding: 0;">🏦 Proyecto: Análisis Exploratorio de Datos - Bank Marketing</h1>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
     st.markdown("---")
 
     col1, col2 = st.columns([2, 1])
