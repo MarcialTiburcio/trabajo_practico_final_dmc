@@ -61,7 +61,7 @@ if "data" not in st.session_state:
 # MÓDULO 1: HOME (PRESENTACIÓN)
 # ==========================================
 if opcion_menu == "1. Home":
-    st.image("logo_python.png", width = 100)
+    st.image("logo_python.png")
     st.title("🏦 Proyecto: Análisis Exploratorio de Datos - Bank Marketing")
     st.markdown("---")
 
