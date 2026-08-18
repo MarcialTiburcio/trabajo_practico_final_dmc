@@ -69,15 +69,14 @@ if opcion_menu == "1. Home":
     col_img, col_txt = st.columns([1, 4], vertical_alignment="center")
     
     with col_img:
-        st.image("logo_python.png", width=90)
-    
-    with col_txt:
         st.markdown(
-            "<h1 style='margin: 0; padding: 0;'>Proyecto: Análisis Exploratorio"
-            " de Datos - Bank Marketing</h1>",
-            unsafe_allow_html=True,
-        )
-
+                "<h1 style='margin: 0; padding: 0;'>Proyecto: Análisis Exploratorio"
+                " de Datos - Bank Marketing</h1>",
+                unsafe_allow_html=True,
+            )
+    with col_txt:
+        st.image("logo_python.png")
+        
     st.markdown("---")
 
     col1, col2 = st.columns([2, 1])
