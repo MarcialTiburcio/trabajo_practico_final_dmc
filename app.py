@@ -61,11 +61,7 @@ if "data" not in st.session_state:
 # MÓDULO 1: HOME (PRESENTACIÓN)
 # ==========================================
 if opcion_menu == "1. Home":
-    # st.image("logo_python.png")
-    # st.title("🏦 Proyecto: Análisis Exploratorio de Datos - Bank Marketing")
-    # st.markdown("---")
-    # --- ENCABEZADO CON HTML/CSS ---
-# Reemplaza las líneas 68 a 75 por esto:
+
     col_img, col_txt = st.columns([1, 4], vertical_alignment="center")
     
     with col_img:
@@ -78,7 +74,6 @@ if opcion_menu == "1. Home":
                 unsafe_allow_html=True,
             )
     
-        
     st.markdown("---")
 
     col1, col2 = st.columns([2, 1])
@@ -101,7 +96,7 @@ if opcion_menu == "1. Home":
 
     with col2:
         st.info("👨‍💻 **Datos del Autor**")
-        st.write("**Estudiante:** Juan Pérez")
+        st.write("**Estudiante:** Reyes Marcial Tiburcio Totos")
         st.write("**Curso:** Especialización en Python for Analytics")
         st.write("**Año:** 2026")
 
