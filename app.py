@@ -66,7 +66,7 @@ if opcion_menu == "1. Home":
     # st.markdown("---")
     # --- ENCABEZADO CON HTML/CSS ---
 # Reemplaza las líneas 68 a 75 por esto:
-    col_img, col_txt = st.columns([4, 1], vertical_alignment="center")
+    col_img, col_txt = st.columns([1, 4], vertical_alignment="center")
     
     with col_txt:
         st.markdown(
