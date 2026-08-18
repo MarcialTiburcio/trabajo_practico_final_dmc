@@ -68,8 +68,8 @@ if opcion_menu == "1. Home":
     st.markdown(
         """
         <div style="display: flex; align-items: center; gap: 20px;">
-            <img src="https://raw.githubusercontent.com/tu-usuario/tu-repo/main/logo_dmc.png" width="90">
-            <h1 style="margin: 0; padding: 0;">🏦 Proyecto: Análisis Exploratorio de Datos - Bank Marketing</h1>
+            <img src="logo_python.png width="90">
+            <h1 style="margin: 0; padding: 0;">Proyecto: Análisis Exploratorio de Datos - Bank Marketing</h1>
         </div>
         """,
         unsafe_allow_html=True,
