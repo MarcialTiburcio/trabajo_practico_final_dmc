@@ -1,5 +1,5 @@
-import matplotlib.pyplot as plt
 import pandas as pd
+import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
 
@@ -8,33 +8,24 @@ st.set_page_config(
     page_title="EDA Bank Marketing App", page_icon="📊", layout="wide"
 )
 
-
-# ==========================================
 # CLASE POO: PROGRAMACIÓN ORIENTADA A OBJETOS
-# ==========================================
-class AnalizadorDatos:
+class AnalizaDatos:
     """Clase encargada de encapsular el procesamiento y análisis descriptivo del dataset."""
-
     def __init__(self, df):
         self.df = df
 
     def clasificar_variables(self):
         """Función personalizada para clasificar columnas en numéricas y categóricas."""
-        numericas = self.df.select_dtypes(
-            include=['int64', 'float64']
-        ).columns.tolist()
-        categoricas = self.df.select_dtypes(
-            include=['object', 'category']
-        ).columns.tolist()
+        numericas = self.df.select_dtypes(include=["int64", "float64"]).columns.tolist()
+        categoricas = self.df.select_dtypes(include=["object", "category"]).columns.tolist()
         return numericas, categoricas
 
     def obtener_resumen_nulos(self):
         """Genera una tabla con la información de tipos de datos y nulos."""
         resumen = pd.DataFrame({
-            'Tipo de Dato': self.df.dtypes.astype(str),
-            'Valores Nulos': self.df.isnull().sum(),
-            'Porcentaje Nulos (%)': (self.df.isnull().sum() / len(self.df))
-            * 100,
+            "Tipo de Dato": self.df.dtypes.astype(str),
+            "Valores Nulos": self.df.isnull().sum(),
+            "Porcentaje Nulos (%)": (self.df.isnull().sum() / len(self.df)) * 100,
         })
         return resumen
 
@@ -168,7 +159,7 @@ elif opcion_menu == "3. Análisis EDA":
         )
     else:
         df = st.session_state["data"]
-        analizador = AnalizadorDatos(df)
+        analizador = AnalizaDatos(df)
         num_vars, cat_vars = analizador.clasificar_variables()
 
         # Organización mediante pestañas (st.tabs)
