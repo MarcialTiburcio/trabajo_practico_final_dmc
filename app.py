@@ -265,40 +265,24 @@ elif opcion_menu == "3. Análisis EDA":
                     opciones_categoricas.append(c)
             
             # Pasar la lista limpia al selectbox
-            var_biv_cat = st.selectbox(
-                "Seleccione variable categórica a comparar con 'y':",
-                opciones_categoricas,
-                key="biv_cat",
-            )
+            var_biv_cat = st.selectbox("Seleccione variable categórica a comparar con 'y':", opciones_categoricas, key="biv_cat")
 
             ct = pd.crosstab(df[var_biv_cat], df["y"], normalize="index") * 100
             fig, ax = plt.subplots(figsize=(9, 4))
             ct.plot(kind="bar", stacked=True, ax=ax, colormap="tab10")
             ax.set_ylabel("Porcentaje (%)")
             ax.set_title(f"Tasa de Respuesta en {var_biv_cat}")
-            plt.xticks(rotation=45, ha="right")
+            plt.xticks(rotation = 45, ha = "right")
             st.pyplot(fig)
 
         # TAB 5: ITEMS 9 Y 10
         with tab5:
-            st.subheader(
-                "Ítem 9: Análisis Basado en Parámetros Seleccionados"
-            )
-            columnas_mult = st.multiselect(
-                "Seleccione columnas numéricas para ver correlación:",
-                num_vars,
-                default=num_vars[:4] if len(num_vars) >= 4 else num_vars,
-            )
+            st.subheader("Ítem 9: Análisis Basado en Parámetros Seleccionados")
+            columnas_mult = st.multiselect("Seleccione columnas numéricas para ver correlación:",  num_vars, default=num_vars[:4] if len(num_vars) >= 4 else num_vars )
 
             if len(columnas_mult) >= 2:
                 fig, ax = plt.subplots(figsize=(7, 4))
-                sns.heatmap(
-                    df[columnas_mult].corr(),
-                    annot=True,
-                    fmt=".2f",
-                    cmap="coolwarm",
-                    ax=ax,
-                )
+                sns.heatmap(df[columnas_mult].corr(), annot = True,  fmt = ".2f", cmap = "coolwarm", ax = ax)
                 st.pyplot(fig)
             else:
                 st.info("Seleccione al menos 2 columnas para calcular la matriz.")
