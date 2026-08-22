@@ -33,10 +33,7 @@ class AnalizaDatos:
         """Devuelve las estadísticas descriptivas de las variables cuantitativas."""
         return self.df.describe()
 
-
-# ==========================================
 # MENÚ NAVEGABLE EN LA BARRA LATERAL (SIDEBAR)
-# ==========================================
 st.sidebar.image("logo_dmc.png")
 st.sidebar.title("Menú de Navegación 📌")
 opcion_menu = st.sidebar.radio(
@@ -48,11 +45,8 @@ opcion_menu = st.sidebar.radio(
 if "data" not in st.session_state:
     st.session_state["data"] = None
 
-# ==========================================
 # MÓDULO 1: HOME (PRESENTACIÓN)
-# ==========================================
 if opcion_menu == "1. Home":
-
     col_img, col_txt = st.columns([1, 4], vertical_alignment="center")
     
     with col_img:
@@ -99,17 +93,13 @@ if opcion_menu == "1. Home":
         - Matplotlib & Seaborn
         """)
 
-# ==========================================
 # MÓDULO 2: CARGA DEL DATASET
-# ==========================================
+
 elif opcion_menu == "2. Carga de Datos":
     st.title("📁 Módulo de Carga del Dataset")
     st.markdown("---")
 
-    archivo_cargado = st.file_uploader(
-        "Cargue el archivo CSV de Bank Marketing (ej. BankMarketing.csv o delimitado por ';'):",
-        type=["csv"],
-    )
+    archivo_cargado = st.file_uploader("Cargue el archivo CSV de Bank Marketing (ej. BankMarketing.csv o delimitado por ';'):", type=["csv"])
 
     if archivo_cargado is not None:
         try:
