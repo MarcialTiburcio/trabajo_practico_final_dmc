@@ -146,9 +146,7 @@ elif opcion_menu == "2. Carga de Datos":
                 "Ya existe un dataset cargado en la sesión activa. Puede proceder al Módulo de Análisis."
             )
 
-# ==========================================
-# MÓDULO 3: ANÁLISIS EXPLORATORIO DE DATOS (EDA)
-# ==========================================
+# MÓDULO 3: ANÁLISIS EXPLORATORIO DE DATOS
 elif opcion_menu == "3. Análisis EDA":
     st.title("🔬 Módulo 3: Análisis Exploratorio de Datos (EDA)")
     st.markdown("---")
@@ -250,10 +248,7 @@ elif opcion_menu == "3. Análisis EDA":
             with col_tab:
                 conteo = df[var_cat_sel].value_counts()
                 if ver_porcentaje:
-                    tabla_cat = pd.DataFrame({
-                        "Frecuencia": conteo,
-                        "Porcentaje (%)": (conteo / len(df)) * 100,
-                    })
+                    tabla_cat = pd.DataFrame({"Frecuencia": conteo, "Porcentaje (%)": (conteo / len(df)) * 100})
                 else:
                     tabla_cat = pd.DataFrame({"Frecuencia": conteo})
                 st.dataframe(tabla_cat)
