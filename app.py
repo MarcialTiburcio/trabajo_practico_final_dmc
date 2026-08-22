@@ -33,7 +33,8 @@ class AnalizaDatos:
         """Devuelve las estadísticas descriptivas de las variables cuantitativas."""
         return self.df.describe()
 
-# MENÚ NAVEGABLE EN LA BARRA LATERAL (SIDEBAR)
+# SIDEBAR
+
 st.sidebar.image("logo_dmc.png")
 st.sidebar.title("Menú de Navegación 📌")
 opcion_menu = st.sidebar.radio(
@@ -205,33 +206,25 @@ elif opcion_menu == "3. Análisis EDA":
                     "Se identificaron registros con etiquetas **'unknown'** en variables categóricas:"
                 )
                 df_unknown = pd.DataFrame.from_dict(
-                    unknown_counts, orient="index", columns=["Conteo Unknown"]
+                    unknown_counts, orient="index", columns = ["Conteo Unknown"]
                 )
                 st.table(df_unknown)
 
         # TAB 3: ITEMS 5 Y 6
         with tab3:
             st.subheader("Ítem 5: Distribución de Variables Numéricas")
-            var_num_sel = st.selectbox(
-                "Seleccione una variable numérica:", num_vars, key="sb_num"
-            )
-            bins_num = st.slider(
-                "Seleccione cantidad de Bins (intervalos):", 5, 50, 20
-            )
+            var_num_sel = st.selectbox("Seleccione una variable numérica:", num_vars, key="sb_num")
+            bins_num = st.slider("Seleccione cantidad de Bins (intervalos):", 5, 50, 20)
 
             fig, ax = plt.subplots(figsize=(8, 4))
-            sns.histplot(df[var_num_sel], bins=bins_num, kde=True, ax=ax)
+            sns.histplot(df[var_num_sel], bins=bins_num, kde=True, ax = ax)
             ax.set_title(f"Distribución de {var_num_sel}")
             st.pyplot(fig)
 
             st.markdown("---")
             st.subheader("Ítem 6: Análisis de Variables Categóricas")
-            var_cat_sel = st.selectbox(
-                "Seleccione una variable categórica:", cat_vars, key="sb_cat"
-            )
-            ver_porcentaje = st.checkbox(
-                "Mostrar proporciones en porcentaje (%)"
-            )
+            var_cat_sel = st.selectbox("Seleccione una variable categórica:", cat_vars, key="sb_cat")
+            ver_porcentaje = st.checkbox("Mostrar proporciones en porcentaje (%)")
 
             col_graf, col_tab = st.columns([2, 1])
 
@@ -241,28 +234,19 @@ elif opcion_menu == "3. Análisis EDA":
                     tabla_cat = pd.DataFrame({"Frecuencia": conteo, "Porcentaje (%)": (conteo / len(df)) * 100})
                 else:
                     tabla_cat = pd.DataFrame({"Frecuencia": conteo})
+                    
                 st.dataframe(tabla_cat)
 
             with col_graf:
                 fig, ax = plt.subplots(figsize=(7, 4))
-                sns.countplot(
-                    data=df,
-                    y=var_cat_sel,
-                    order=conteo.index,
-                    palette="viridis",
-                    ax=ax,
-                )
+                sns.countplot(data = df, y = var_cat_sel, order = conteo.index, palette="viridis", ax = ax)
                 ax.set_title(f"Frecuencia de {var_cat_sel}")
                 st.pyplot(fig)
 
         # TAB 4: ITEMS 7 Y 8
         with tab4:
             st.subheader("Ítem 7: Bivariado (Numérico vs Categórico Target)")
-            var_biv_num = st.selectbox(
-                "Seleccione variable numérica a comparar con 'y':",
-                num_vars,
-                key="biv_num",
-            )
+            var_biv_num = st.selectbox("Seleccione variable numérica a comparar con 'y':", num_vars, key = "biv_num")
 
             fig, ax = plt.subplots(figsize=(8, 4))
             sns.boxplot(data=df, x="y", y=var_biv_num, palette="Set2", ax=ax)
@@ -270,12 +254,20 @@ elif opcion_menu == "3. Análisis EDA":
             st.pyplot(fig)
 
             st.markdown("---")
-            st.subheader(
-                "Ítem 8: Bivariado (Categórico vs Categórico Target)"
-            )
+            st.subheader("Ítem 8: Bivariado (Categórico vs Categórico Target)")
+            #var_biv_cat = st.selectbox("Seleccione variable categórica a comparar con 'y':",[c for c in cat_vars if c != "y"], key="biv_cat")
+            
+            # Crear una lista vacía para guardar solo las categóricas que no sean 'y'
+            opciones_categoricas = []
+            
+            for c in cat_vars:
+                if c != "y":
+                    opciones_categoricas.append(c)
+            
+            # Pasar la lista limpia al selectbox
             var_biv_cat = st.selectbox(
                 "Seleccione variable categórica a comparar con 'y':",
-                [c for c in cat_vars if c != "y"],
+                opciones_categoricas,
                 key="biv_cat",
             )
 
