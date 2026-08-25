@@ -195,7 +195,7 @@ elif opcion_menu == "3. Análisis EDA":
                 f"**Cantidad de valores nulos explícitos (NaN):** {nulos_totales}"
             )
 
-            # Verificación de categoría 'unknown' en categóricas
+            # Verificación de categoría 'desconocidos' en categóricas
             unknown_counts = {
                 col: (df[col] == "unknown").sum()
                 for col in cat_vars
