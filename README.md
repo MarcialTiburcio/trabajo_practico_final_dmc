@@ -21,8 +21,9 @@ Este proyecto analiza los factores que influyen en la tasa de respuesta y contra
   <img width="1917" height="967" alt="image" src="https://github.com/user-attachments/assets/c684824c-0f22-4f28-bb22-8f923cb2c8b1" />
   <img width="1917" height="965" alt="image" src="https://github.com/user-attachments/assets/90fe9c6c-586a-4438-ac15-c23a5de38896" />
 
-## ⚙️ Instrucciones de Ejecución Local
-1. Clonar el repositorio:
-   ```bash
-   git clone [https://github.com/tu-usuario/bank-marketing-eda.git](https://github.com/tu-usuario/bank-marketing-eda.git)
-   cd bank-marketing-eda
+## Instrucciones de Ejecución:
+1. Para que la aplicación corra sin problemas, primero se debe cargar el dataset
+2. Para visualizar el análisis del dataset diríjase a la opción Análisis EDA
+
+## Links relevantes:
+1. Aplicación: https://trabajopracticofinaldmc-reyesmarcialtiburciototos.streamlit.app/
