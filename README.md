@@ -13,7 +13,11 @@ Este proyecto analiza los factores que influyen en la tasa de respuesta y contra
 * `2. Carga de datos
   <img width="1915" height="965" alt="image" src="https://github.com/user-attachments/assets/ab111fa5-da42-478a-94f4-c6ec6928708f" />
 
-* `requirements.txt`: Librerías necesarias para ejecutar la app.
+* `3. Análisis EDA
+  <img width="1902" height="957" alt="image" src="https://github.com/user-attachments/assets/fd76c655-67a4-4908-b9b2-7bc11e7c6071" />
+  <img width="1907" height="961" alt="image" src="https://github.com/user-attachments/assets/a21aaf0b-dcba-4e16-ba9d-7fdbd283d56f" />
+
+
 * `README.md`: Documentación e instrucciones.
 
 ## ⚙️ Instrucciones de Ejecución Local
