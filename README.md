@@ -10,7 +10,9 @@ Este proyecto analiza los factores que influyen en la tasa de respuesta y contra
 * `1. Home
   <img width="1911" height="955" alt="image" src="https://github.com/user-attachments/assets/f5157681-90e3-4f19-a7bf-c222e446ce9f" />
 
-* `BankMarketing.csv`: Conjunto de datos analizado.
+* `2. Carga de datos
+  <img width="1915" height="965" alt="image" src="https://github.com/user-attachments/assets/ab111fa5-da42-478a-94f4-c6ec6928708f" />
+
 * `requirements.txt`: Librerías necesarias para ejecutar la app.
 * `README.md`: Documentación e instrucciones.
 
