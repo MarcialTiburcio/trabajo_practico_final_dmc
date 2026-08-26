@@ -17,9 +17,9 @@ Este proyecto analiza los factores que influyen en la tasa de respuesta y contra
   <img width="1902" height="957" alt="image" src="https://github.com/user-attachments/assets/fd76c655-67a4-4908-b9b2-7bc11e7c6071" />
   <img width="1907" height="961" alt="image" src="https://github.com/user-attachments/assets/a21aaf0b-dcba-4e16-ba9d-7fdbd283d56f" />
   <img width="1911" height="957" alt="image" src="https://github.com/user-attachments/assets/59b772fc-f8e7-445e-b62d-1c9770fb3bd4" />
-
-
-* `README.md`: Documentación e instrucciones.
+  <img width="1907" height="962" alt="image" src="https://github.com/user-attachments/assets/418541a8-d64e-4a75-a6cf-e33ea451c70e" />
+  <img width="1917" height="967" alt="image" src="https://github.com/user-attachments/assets/c684824c-0f22-4f28-bb22-8f923cb2c8b1" />
+  <img width="1917" height="965" alt="image" src="https://github.com/user-attachments/assets/90fe9c6c-586a-4438-ac15-c23a5de38896" />
 
 ## ⚙️ Instrucciones de Ejecución Local
 1. Clonar el repositorio:
