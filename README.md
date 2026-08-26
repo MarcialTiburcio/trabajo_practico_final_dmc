@@ -27,3 +27,4 @@ Este proyecto analiza los factores que influyen en la tasa de respuesta y contra
 
 ## Links relevantes:
 1. Aplicación: https://trabajopracticofinaldmc-reyesmarcialtiburciototos.streamlit.app/
+2. Repositorio: https://github.com/MarcialTiburcio/trabajo_practico_final_dmc 
